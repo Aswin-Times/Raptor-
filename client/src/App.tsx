@@ -6,7 +6,6 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import EmergencyChat from "./pages/EmergencyChat";
-import ChatHistory from "./pages/ChatHistory";
 import FirstAid from "./pages/FirstAid";
 
 import Auth from "./pages/Auth";
@@ -19,7 +18,6 @@ function Router() {
       <Route path="/auth" component={Auth} />
       <Route path="/first-aid" component={FirstAid} />
       <Route path="/emergency/:incidentId" component={EmergencyChat} />
-      <Route path="/history" component={ChatHistory} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

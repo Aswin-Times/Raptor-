@@ -75,16 +75,6 @@ export default function Home() {
       desc: "Interactive map integration for precise accident location capture and sharing",
       link: "https://www.google.com/maps/search/Nearest+Hospitals",
     },
-    {
-      icon: Clock,
-      title: "Voice-to-Text Input",
-      desc: "Hands-free emergency reporting with automatic speech transcription",
-    },
-    {
-      icon: Shield,
-      title: "Incident Logging",
-      desc: "Complete chat history and incident reports saved for review and follow-up",
-    },
   ];
 
   return (
@@ -104,14 +94,6 @@ export default function Home() {
           <div className="hidden sm:flex items-center gap-2">
             {isAuthenticated ? (
               <>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setLocation("/history")}
-                  className="text-foreground/70 hover:text-foreground"
-                >
-                  History
-                </Button>
                 <span className="text-sm text-foreground/80 max-w-[120px] truncate">
                   {user?.name || "User"}
                 </span>
@@ -139,14 +121,6 @@ export default function Home() {
             {isAuthenticated ? (
               <>
                 <p className="text-sm text-foreground/60 truncate">{user?.name || "User"}</p>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-full justify-start"
-                  onClick={() => { setMobileMenuOpen(false); setLocation("/history"); }}
-                >
-                  History
-                </Button>
               </>
             ) : (
               <Button
