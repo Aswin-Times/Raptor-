@@ -71,8 +71,8 @@ export default function Home() {
     },
     {
       icon: MapPin,
-      title: "Location Mapping",
-      desc: "Interactive map integration for precise accident location capture and sharing",
+      title: "Hospital Locator",
+      desc: "Instantly locate the nearest hospitals and health centers based on your current location",
       link: "https://www.google.com/maps/search/Nearest+Hospitals",
     },
   ];
