@@ -62,6 +62,7 @@ export default function Home() {
       icon: Zap,
       title: "First Aid Guidance",
       desc: "Step-by-step emergency first aid instructions tailored to reported injuries",
+      link: "/first-aid",
     },
     {
       icon: Phone,
@@ -255,7 +256,14 @@ export default function Home() {
               <Card
                 key={title}
                 className={`bg-card/50 backdrop-blur border-border/50 hover:border-primary/50 transition-all p-5 sm:p-6 group ${link ? 'cursor-pointer hover:-translate-y-1' : ''}`}
-                onClick={() => link && window.open(link, "_blank")}
+                onClick={() => {
+                  if (!link) return;
+                  if (link.startsWith("http")) {
+                    window.open(link, "_blank");
+                  } else {
+                    setLocation(link);
+                  }
+                }}
               >
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/30 transition-colors">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
